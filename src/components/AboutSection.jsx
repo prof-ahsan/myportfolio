@@ -29,7 +29,7 @@ export function AboutSection() {
             transition={{ duration: 0.7 }}
             className="flex-1"
           >
-            <img src={about} loading='lazy' alt="About Me" className="w-full h-screen rounded-2xl shadow-lg" />
+            <img src={about} loading='lazy' alt="About Me" className=" lg:w-full lg:h-screen rounded-2xl shadow-lg" />
           
           </motion.div>
           
@@ -47,7 +47,7 @@ export function AboutSection() {
             </h3>
             <div className="space-y-6 text-[var(--color-brand-text)] text-lg leading-relaxed">
               <p>
-Hello! I'm Alex Morgan, a passionate front-end developer with a keen eye for design and a love for creating seamless user experiences. I specialize in building modern, responsive web applications using the latest technologies.              </p>
+Hello! I'm Ahsan Ishtiaq, a passionate front-end developer with a keen eye for design and a love for creating seamless user experiences. I specialize in building modern, responsive web applications using the latest technologies.              </p>
               <p>
                 Shortly after graduating, I joined the engineering team at an exciting tech lab where I work on a wide variety of interesting and meaningful projects on a daily basis. 
               </p>

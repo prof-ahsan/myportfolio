@@ -49,7 +49,7 @@ export function Footer() {
             <a href="https://www.linkedin.com/in/mahsan-ishtiaq/" title='Linkedin' target='_blank' className="w-10 h-10 rounded-full bg-[var(--color-brand-bg)] flex items-center justify-center text-[var(--color-brand-text)] hover:text-[var(--color-brand-primary)] hover:border px-2 hover:border-[var(--color-brand-primary)] transition-all">
               <Linkedin size={18} />
             </a>
-            <a href="https://drive.google.com/file/d/1eqLmAZ6oC0ozjk0Zerks61bWdqkxF0IS/view" target='_blank' title='CV' className="w-10 h-10 rounded-full bg-[var(--color-brand-bg)] flex items-center justify-center text-[var(--color-brand-text)] hover:text-[var(--color-brand-primary)] hover:border px-2 hover:border-[var(--color-brand-primary)] transition-all">
+            <a href="https://drive.google.com/file/d/12OJpMVu0KwadHzRGomTXofIwfAg9QnrZ/view?usp=sharing" target='_blank' title='CV' className="w-10 h-10 rounded-full bg-[var(--color-brand-bg)] flex items-center justify-center text-[var(--color-brand-text)] hover:text-[var(--color-brand-primary)] hover:border px-2 hover:border-[var(--color-brand-primary)] transition-all">
               <FileDown size={18} />
             </a>
           </div>
