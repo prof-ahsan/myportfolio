@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+  /* --color-brand-bg: #0B0B0F; */
+  --color-brand-bg: #0A0A0F;
+  --color-brand-card: #16161D;
+  --color-brand-primary: #7C5DFA;
+  --color-brand-text: #94A3B8;
+  --color-brand-heading: #FFFFFF;
+}
+
+body {
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-text);
+  font-family: 'Inter', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
