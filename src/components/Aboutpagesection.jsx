@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
-import about from '../assets/about.png'
+import about from '../assets/about.jpeg';
 
 const features = [
   { title: "Clean Code", desc: "Maintainable & Scalable" },
@@ -29,21 +29,8 @@ export function Aboutpagesection() {
             transition={{ duration: 0.7 }}
             className="flex-1"
           >
-            <img src={about} alt="About Me" className="w-full h-screen rounded-2xl shadow-lg" />
-            {/* <h3 className="text-3xl font-bold text-[var(--color-brand-heading)] mb-6 leading-snug">
-              Designing with passion, building with precision.
-            </h3>
-            <div className="space-y-6 text-[var(--color-brand-text)] text-lg leading-relaxed">
-              <p>
-                Hello! I'm Alex, a passionate web developer based in New York. I enjoy creating things that live on the internet, from websites to complex web apps. My goal is to build products that provide pixel-perfect, performant experiences.
-              </p>
-              <p>
-                Shortly after graduating, I joined the engineering team at an exciting tech lab where I work on a wide variety of interesting and meaningful projects on a daily basis. 
-              </p>
-              <p>
-                When I'm not in front of a computer screen, you can find me hiking, reading tech blogs, or experimenting with new design tools.
-              </p>
-            </div> */}
+            <img src={about} loading='eager' alt="About Me" className="w-full h-screen rounded-2xl shadow-lg" />
+            
           </motion.div>
           
           {/* Right: Features */}

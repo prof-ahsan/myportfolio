@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
-import project1 from '../assets/project3.png';
+import project1 from '../assets/project1.jpeg';
 
 const categories = ["All Projects",
   //  "Web Apps", "Mobile", "UI/UX"
@@ -97,7 +97,7 @@ export function PortfolioSection() {
                 <div className="relative h-64 md:h-80 overflow-hidden">
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors z-10 duration-500"></div>
                   <img 
-                    src={project.image} 
+                    src={project.image} loading='lazy'
                     alt={project.title} 
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
                   />

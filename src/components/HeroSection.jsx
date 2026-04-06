@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 import { TypewriterEffect } from "./ui/Typewritter";
 import { Github, Linkedin, Twitter , FileDown } from 'lucide-react';
 // import Me from '../../public/itxahsan.png';
-import Me from '../assets/myimg.png';
+import Me from '../assets/myimg.jpeg';
 
 
 export function HeroSection() {
