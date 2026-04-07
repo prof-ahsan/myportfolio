@@ -12,8 +12,7 @@ import Ready from './components/Ready';
 const App = () => {
   return (
     <div>
-      {/* <Home /> */}
-  {/* <Navvbar /> */}
+      
 
 <BrowserRouter>
   <Navvbar />

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Lenis from 'lenis';
-import { Navbar } from '../components/Navbar';
 import { HeroSection } from '../components/HeroSection';
 import { ServicesSection } from '../components/ServicesSection';
 import { AboutSection } from '../components/AboutSection';
@@ -38,8 +37,7 @@ function Home() {
 
   return (
     <div className="relative w-full overflow-x-hidden selection:bg-[var(--color-brand-primary)] selection:text-white">
-      {/* <Navbar /> */}
-      {/* <Navvbar /> */}
+     
       
       <main className="flex flex-col w-full min-h-screen">
         <HeroSection />
