@@ -4,7 +4,6 @@ import { Button } from './Button';
 import { Link } from 'react-scroll';
 import { TypewriterEffect } from "./ui/Typewritter";
 import { Github, Linkedin, Twitter, FileDown } from 'lucide-react';
-// import Me from '../../public/itxahsan.png';
 import Me from '../assets/me.jpeg';
 
 
@@ -15,7 +14,6 @@ export function HeroSection() {
     { text: "Scalable" },
     { text: "Beautiful UIs" },
     { text: "Responsive Web Apps" },
-    // { text: "Interactive Apps" },
     { text: "Frontend Magic" },
   ];
 
@@ -48,16 +46,16 @@ export function HeroSection() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-brand-primary)] to-[#c084fc] drop-shadow-[0_0_20px_rgba(139,92,246,0.6)]"> Ahsan Ishtiaq</span>
           </motion.h1>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-[var(--color-brand-text)] text-md md:text-l max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed font-light"
           >
-            <a className="flex items-baseline justify-center lg:justify-start text-lg sm:text-2xl text-center  font-semibold mt-1 text-[#3B82F6]">I Build <TypewriterEffect words={words} /></a>
+            <span className="flex items-baseline justify-center lg:justify-start text-lg sm:text-2xl text-center  font-semibold mt-1 text-[#3B82F6]">I Build <TypewriterEffect words={words} /></span>
 
             Focused on building performant apps and designing beautiful UIs.
-          </motion.p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -96,7 +94,7 @@ hover:bg-white/20 transition-all duration-300">
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className=" relative flex items-center gap-5 mt-5 justify-center lg:justify-start  sm:min-h-[400px]"
+          className=" relative flex items-center gap-5 justify-center lg:justify-start  sm:min-h-[400px]"
         >
           {/* Abstract geometric composition instead of pure image (matching modern minimalistic tech vibe) */}
           <div className="relative w-[250px] h-[250px] md:w-[450px] md:h-[450px]">
@@ -113,26 +111,9 @@ hover:bg-white/20 transition-all duration-300">
                 alt="Profile"
                 className="block mx-auto relative w-40 h-40 md:w-64 md:h-64 lg:w-75 lg:h-75 rounded-full object-contain border-4 border-white/40 shadow-xl hover:scale-105 transition duration-300 ease-in-out"
               />
-              {/* <img 
-    src={Me} loading='eager'
-    alt="Profile" 
-    className="relative w-48 h-48 md:w-72 md:h-72 rounded-full object-cover border-4 border-white/30 shadow-[0_20px_50px_rgba(139,92,246,0.4)]" 
-  /> */}
+             
             </div>
-            {/* <div>
-             <img src={Me} alt="Profile" className="w-48 h-48 md:w-76 md:h-76 rounded-full object-cover border-4 border-white/30 shadow-lg" />
-
-            </div> */}
-            {/* <motion.div 
-              animate={{ y: [-10, 10, -10] }}
-              transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 md:w-64 md:h-64 bg-gradient-to-br from-[var(--color-brand-primary)] to-[#831843] rounded-[2.5rem] rotate-12 flex flex-col items-center justify-center shadow-[0_20px_50px_rgba(124,93,250,0.5)] border border-white/20 backdrop-blur-md z-20"
-            >
-              <img src={Me} alt="Profile" className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-white/30 shadow-lg" />
-
-              <div className="text-white text-6xl md:text-7xl font-black mb-1 -rotate-12 drop-shadow-md">2+</div>
-              <div className="text-white/90 font-bold text-lg md:text-xl uppercase tracking-widest -rotate-12">Years Exp</div>
-            </motion.div> */}
+           
 
             {/* Decorative accents */}
             <motion.div

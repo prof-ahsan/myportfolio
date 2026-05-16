@@ -56,7 +56,6 @@ const Myjourney = () => {
             <div className='p-1'>
                 <h3 className=' text-lg sm:text-2xl text-white '>Building Real-World Projects</h3>
                 <a className=' text-sm sm:text-md'>Present</a>
-                {/* <p className='p-1 text-sm sm:text-md'>Began my journey into web development, learning HTML, CSS, and JavaScript fundamentals. Quickly fell in love with creating interactive user interfaces.</p> */}
             </div>
         </div>
       </div>

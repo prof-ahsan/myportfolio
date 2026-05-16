@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
-import about from '../assets/about.jpeg';
+import about from '../assets/about.jpg';
 
 const features = [
   { title: "Clean Code", desc: "Maintainable & Scalable" },

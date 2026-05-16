@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
-import about from '../assets/about.jpeg';
+import about from '../assets/about.jpg';
 
 const features = [
   { title: "Clean Code", desc: "Maintainable & Scalable" },
@@ -50,9 +50,6 @@ export function AboutSection() {
 Hello! I'm Ahsan Ishtiaq, a passionate front-end developer with a keen eye for design and a love for creating seamless user experiences. I specialize in building modern, responsive web applications using the latest technologies.              </p>
               <p>
                 Shortly after graduating, I joined the engineering team at an exciting tech lab where I work on a wide variety of interesting and meaningful projects on a daily basis. 
-              </p>
-              <p>
-                {/* When I'm not in front of a computer screen, you can find me hiking, reading tech blogs, or experimenting with new design tools. */}
               </p>
             </div>
             </div>

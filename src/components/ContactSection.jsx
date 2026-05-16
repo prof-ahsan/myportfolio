@@ -4,9 +4,41 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
 import { Button } from './Button';
+import { useEffect } from "react";
 
 export function ContactSection() {
    const [state, handleSubmit] = useForm('mdawrvng');
+
+
+   const [showSuccess, setShowSuccess] = useState(false);
+const [isSending, setIsSending] = useState(false);
+
+
+const handleSmoothSubmit = async (e) => {
+  e.preventDefault();
+  setIsSending(true);
+  try {
+    await handleSubmit(e);
+  } catch (err) {
+    setIsSending(false);
+  }
+};
+
+
+useEffect(() => {
+  if (state.succeeded) {
+    setIsSending(true); // Keep the plane flying while we wait
+    setTimeout(() => {
+      setShowSuccess(true);
+      setIsSending(false);
+    }, 1500); // Show thank you message after 1.5 seconds
+  } else if (state.errors && state.errors.length > 0) {
+    setIsSending(false);
+  }
+}, [state.succeeded, state.errors]);
+
+
+
  const contactInfo = [
   {
     icon: <Mail size={24} />,
@@ -27,11 +59,7 @@ export function ContactSection() {
     link: null,
   },
 ];
-  // const contactInfo = [
-  //   { icon: <Mail size={24} />, label: "Email", value: "contact.ahsanishtiaq@gmail.com" },
-  //   { icon: <Phone size={24} />, label: "Phone", value: "+92 313 4731202" },
-  //   { icon: <MapPin size={24} />, label: "Location", value: "Lahore, Pakistan" }
-  // ];
+  
 
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
@@ -73,12 +101,12 @@ export function ContactSection() {
         <a
           href={info.link}
           title={info.label === "Email" ? "Send Email" : "Call Now"}
-          className="text-md sm:text-lg font-bold text-[var(--color-brand-primary)] hover:text-[var(--color-brand-heading)] transition"
+          className="text-md sm:text-lg flex flex-wrap break-all font-bold text-[var(--color-brand-primary)] hover:text-[var(--color-brand-heading)] transition"
         >
           {info.value}
         </a>
       ) : (
-        <p className="text-md sm:text-lg font-bold text-[var(--color-brand-primary)]">
+        <p className="text-md sm:text-lg font-bold flex flex-wrap text-[var(--color-brand-primary)]">
           {info.value}
         </p>
       )}
@@ -86,17 +114,6 @@ export function ContactSection() {
 
   </div>
 ))}
-              {/* {contactInfo.map((info, i) => (
-                <div key={i} className="flex items-center gap-6">
-                  <div className="w-14 h-14 rounded-2xl bg-[var(--color-brand-card)] text-[var(--color-brand-primary)] flex items-center justify-center shadow-lg border border-white/5">
-                    {info.icon}
-                  </div>
-                  <div>
-                    <h4 className="text-sm text-[var(--color-brand-text)] font-medium mb-1 uppercase tracking-wider">{info.label}</h4>
-                    <p className="text-md sm:text-lg font-bold hover:text-[var(--color-brand-heading)] text-[var(--color-brand-primary)] cursor-pointer">{info.value}</p>
-                  </div>
-                </div>
-              ))} */}
             </div>
           </motion.div>
 
@@ -112,7 +129,7 @@ export function ContactSection() {
               {/* Decorative edge highlight */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[var(--color-brand-primary)] to-transparent opacity-50"></div>
               
-              {state.succeeded ? (
+              {showSuccess ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center text-[var(--color-brand-heading)]">
                   <div className="w-20 h-20 rounded-full bg-[var(--color-brand-primary)]/10 text-[var(--color-brand-primary)] flex items-center justify-center mb-6 border border-[var(--color-brand-primary)]/20 shadow-lg">
                     <Send size={40} className="ml-1" />
@@ -123,7 +140,7 @@ export function ContactSection() {
                   </p>
                 </div>
               ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSmoothSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-[var(--color-brand-text)] ml-1">Full Name</label>
@@ -157,11 +174,6 @@ export function ContactSection() {
                     placeholder="Project Inquiry" 
                     className="w-full bg-[var(--color-brand-bg)] border border-white/5 rounded-xl px-5 py-4 text-[var(--color-brand-heading)] focus:outline-none focus:border-[var(--color-brand-primary)] focus:ring-1 focus:ring-[var(--color-brand-primary)] transition-all placeholder:text-gray-600"
                   />
-                  {/* <input 
-  type="hidden" 
-  name="_subject" 
-  value="New Contact Message"
-/> */}
                 </div>
                 
                 
@@ -176,15 +188,54 @@ export function ContactSection() {
                   ></textarea>
                 </div>
                   <ValidationError prefix="Message" field="message" errors={state.errors} />
+
+                  <Button
+  type="submit"
+  variant="primary"
+  disabled={state.submitting || isSending}
+  className={`button w-full py-4 text-lg overflow-hidden relative text-white ${isSending ? 'is-sending' : ''}`}
+>
+  <div className="state state--default flex items-center justify-center gap-3">
+    
+    <div className="icon text-white">
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g style={{ filter: 'url(#shadow)' }}>
+          <path
+            d="M14.22 21.63C13.04 21.63 11.37 20.8 10.05 16.83L9.33 14.67L7.17 13.95C3.21 12.63 2.38 10.96 2.38 9.78C2.38 8.61 3.21 6.93 7.17 5.6L15.66 2.77C17.78 2.06 19.55 2.27 20.64 3.35C21.73 4.43 21.94 6.21 21.23 8.33L18.4 16.82C17.07 20.8 15.4 21.63 14.22 21.63Z"
+            fill="currentColor"
+          />
+
+          <path
+            d="M10.11 14.4C9.92 14.4 9.73 14.33 9.58 14.18C9.29 13.89 9.29 13.41 9.58 13.12L13.16 9.53C13.45 9.24 13.93 9.24 14.22 9.53C14.51 9.82 14.51 10.3 14.22 10.59L10.64 14.18C10.5 14.33 10.3 14.4 10.11 14.4Z"
+            fill="currentColor"
+          />
+        </g>
+
+        <defs>
+          <filter id="shadow">
+            <feDropShadow
+              dx="0"
+              dy="1"
+              stdDeviation="0.6"
+              floodOpacity="0.5"
+            />
+          </filter>
+        </defs>
+      </svg>
+    </div>
+
+    <span className="font-semibold tracking-wide text-white">
+      {state.submitting || isSending ? 'Sending...' : 'Send Message'}
+    </span>
+  </div>
+</Button>
                 
-                <Button 
-                  type="submit" 
-                  variant="primary" 
-                  className="w-full py-4 text-lg"
-                  disabled={state.submitting}
-                >
-                  {state.submitting ? 'Sending...' : 'Send Message'}
-                </Button>
               </form>
               )}
             </div>

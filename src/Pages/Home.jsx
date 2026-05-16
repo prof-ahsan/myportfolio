@@ -11,6 +11,7 @@ import { Navvbar } from '../components/Navvbar';
 import Ready from '../components/Ready';
 
 function Home() {
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,

@@ -3,9 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
 import project1 from '../assets/project1.jpeg';
+import project2 from '../assets/wordpress1.jpeg';
 
 const categories = ["All Projects",
-  //  "Web Apps", "Mobile", "UI/UX"
+   "Web Apps", "Wordpress", 
   ];
 
 const projects = [
@@ -30,23 +31,16 @@ const projects = [
     liveLink: "https://frozenflake.netlify.app/",
     codeLink: "https://github.com/prof-ahsan/Frozen-Flake-Clone"
   },
-  // {
-  //   id: 3,
-  //   title: "Banking Dashboard",
-  //   category: "UI/UX",
-  //   image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-  //    skills: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-  //   desc: "Clean and intuitive dashboard for personal finance management.",
-  // },
-  // {
-  //   id: 4,
-  //   title: "Real Estate Portal",
-  //   category: "Web Apps",
-  //   image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
-  //   skills: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-
-  //   desc: "Property listing website with advanced filtering and maps.",
-  // }
+  {
+    id: 3,
+    title: "Personal Portfolio Website (WordPress)",
+    category: "Wordpress",
+    image: project2,
+     skills: ["WordPress",'|', "Elementor",'|', "Hello Theme", '|', "Plugins Integration"],
+    desc: "A responsive portfolio website built with WordPress to showcase my projects, skills, and personal information. Designed with a clean UI and optimized for all devices.",
+    liveLink: "https://exampleportfolio.infinityfreeapp.com/?i=2",
+  },
+  
 ];
 
 export function PortfolioSection() {

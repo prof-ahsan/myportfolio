@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "./Button";
 
@@ -12,7 +12,6 @@ export function Navvbar() {
     { name: "About", to: "/about" },
     { name: "Skills", to: "/skills" },
     { name: "Projects", to: "/projects" },
-    // { name: "Contact", to: "/contact" },
   ];
 
   return (
@@ -27,38 +26,7 @@ export function Navvbar() {
           Portfolio
         </NavLink>
 
-        {/* Desktop Nav */}
-        {/* <nav className="hidden md:flex items-center gap-8 relative">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.name}
-              to={link.to}
-              end={link.to === "/"}
-              className={({ isActive }) =>
-                `relative text-lg transition-colors ${
-                  isActive
-                    ? "text-[var(--color-brand-primary)]"
-                    : "text-[var(--color-brand-text)] hover:text-white"
-                }`
-              }
-            >
-              {({ isActive }) => (
-                <>
-                  {link.name}
-
-                  
-                  {isActive && (
-                    <motion.span
-                      layoutId="underline"
-                      className="absolute left-0 -bottom-1 h-[2px] w-full bg-[var(--color-brand-primary)]"
-                    />
-                  )}
-                </>
-              )}
-            </NavLink>
-          ))}
-        </nav> */}
-
+       
         {/* CTA */}
         <div className="hidden md:flex items-center gap-5">
 
@@ -92,10 +60,6 @@ export function Navvbar() {
             </NavLink>
           ))}
         </nav>
-
-
-
-
 
 
           <NavLink to="/contact">
