@@ -7,8 +7,6 @@ import { SkillsSection } from './components/SkillsSection';
 import { PortfolioSection } from './components/PortfolioSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
-
-
 import Ready from './components/Ready';
 
 const App = () => {
