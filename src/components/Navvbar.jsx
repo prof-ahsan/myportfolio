@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "./Button";
+import logo from "../../public/logo.png";
 
 export function Navvbar() {
   const [open, setOpen] = useState(false);
@@ -20,10 +21,11 @@ export function Navvbar() {
         
         {/* Logo */}
         <NavLink to="/" className="text-xl font-bold text-white">
-          <span className="bg-gradient-to-r from-purple-500 to-indigo-500 px-2 py-1 rounded">
+          <img src={logo} alt="Logo" className="h-10 w-auto" />
+          {/* <span className="bg-gradient-to-r from-purple-500 to-indigo-500 px-2 py-1 rounded">
             A
           </span>{" "}
-          Portfolio
+          Portfolio */}
         </NavLink>
 
        
@@ -64,7 +66,7 @@ export function Navvbar() {
 
           <NavLink to="/contact">
             <Button className="bg-gradient-to-r from-purple-500 to-indigo-500">
-              Contact
+              Let's Talk
             </Button>
           </NavLink>
         </div>

@@ -43,14 +43,16 @@ export function AboutSection() {
           >
             <div>
               <h3 className="text-3xl font-bold text-[var(--color-brand-heading)] mb-6 leading-snug">
-              I'm a Front-End Developer
+              I'm a Wordpress & Frontend Developer
             </h3>
             <div className="space-y-6 text-[var(--color-brand-text)] text-lg leading-relaxed">
               <p>
-Hello! I'm Ahsan Ishtiaq, a passionate front-end developer with a keen eye for design and a love for creating seamless user experiences. I specialize in building modern, responsive web applications using the latest technologies.              </p>
-              <p>
-                Shortly after graduating, I joined the engineering team at an exciting tech lab where I work on a wide variety of interesting and meaningful projects on a daily basis. 
-              </p>
+I'm a WordPress & Frontend Developer focused on building responsive, user-friendly websites. I work with WordPress, Elementor Pro, WooCommerce, ACF, React.js, and Tailwind CSS.<br />
+I also have a frontend development background and enjoy combining modern frontend techniques with WordPress to create effective web solutions for businesses and clients.
+
+             </p>
+             <p className='mb-3'>Currently, I'm gaining hands-on experience as a WordPress Developer Intern, working on responsive website development and customization while strengthening my professional skills.</p>
+              
             </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -60,7 +62,7 @@ Hello! I'm Ahsan Ishtiaq, a passionate front-end developer with a keen eye for d
                     <CheckCircle2 size={24} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-[var(--color-brand-heading)] mb-1">{feature.title}</h4>
+                    <h4 className="text-lg font-bold text-[var(--color-brand-heading)] mb-1">{feature.title}</h4>
                     <p className="text-[var(--color-brand-text)] text-sm">{feature.desc}</p>
                   </div>
                 </div>

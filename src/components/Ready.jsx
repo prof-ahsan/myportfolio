@@ -23,7 +23,7 @@ const Ready = () => {
           <div className="z-10">
               <Link to="contact" smooth={true} duration={500}>
                 <button className="bg-white text-[var(--color-brand-primary)] px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl w-full md:w-auto cursor-pointer">
-                  Contact Now
+                  Let's Talk
                 </button>
               </Link>
           </div>

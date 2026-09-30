@@ -1,24 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Palette, CodeXml, Smartphone } from 'lucide-react';
+import { PanelsTopLeft, CodeXml, ShoppingCart, Gauge } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
 
 const services = [
   {
-    icon: <Palette size={32} />,
-    title: 'UI/UX Design',
-    description: 'Creating beautiful and intuitive user interfaces with Figma, focusing on user experience and modern design principles.'
+    icon: <PanelsTopLeft size={32} />,
+    title: 'WordPress Development',
+    description: 'Custom WordPress websites built with Elementor Pro, dynamic templates, ACF and modern development practices.'
+  },
+  {
+    icon: <ShoppingCart size={32} />,
+    title: 'WooCommerce Solutions',
+    description: 'Building responsive eCommerce stores with product layouts, custom pages and smooth shopping experiences.'
   },
   {
     icon: <CodeXml size={32} />,
-    title: 'Web Development',
-    description: 'Building responsive, scalable, and fast web applications using modern frameworks like React, Wordpress, and Tailwind CSS.'
+    title: 'Frontend Development',
+    description: 'Creating responsive interfaces using HTML, CSS, JavaScript, Bootstrap, React and Tailwind CSS.'
   },
-  {
-    icon: <Smartphone size={32} />,
-    title: 'Responsive Design',
-    description: 'Ensuring your website looks perfect on all devices with mobile-first approach and Tailwind CSS.'
-  }
 ];
 
 export function ServicesSection() {
@@ -53,7 +53,7 @@ export function ServicesSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16"
+          className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-16"
         >
           {services.map((service, index) => (
             <motion.div 
@@ -62,10 +62,10 @@ export function ServicesSection() {
               whileHover={{ y: -10 }}
               className="bg-[var(--color-brand-card)] rounded-3xl p-8 lg:p-10 border border-white/5 shadow-lg hover:shadow-[0_20px_40px_rgba(124,93,250,0.1)] transition-all duration-300 group"
             >
-              <div className="w-16 h-16 rounded-2xl bg-[var(--color-brand-bg)] flex items-center justify-center text-[var(--color-brand-primary)] mb-8 group-hover:bg-[var(--color-brand-primary)] group-hover:text-white transition-colors duration-300 shadow-inner">
+              <div className="w-15 h-15 rounded-2xl bg-[var(--color-brand-bg)] flex items-center justify-center text-[var(--color-brand-primary)] mb-8 group-hover:bg-[var(--color-brand-primary)] group-hover:text-white transition-colors duration-300 shadow-inner">
                 {service.icon}
               </div>
-              <h3 className="text-2xl font-bold text-[var(--color-brand-heading)] mb-4">{service.title}</h3>
+              <h3 className="text-xl font-bold text-[var(--color-brand-heading)] mb-4">{service.title}</h3>
               <p className="text-[var(--color-brand-text)] leading-relaxed">{service.description}</p>
             </motion.div>
           ))}

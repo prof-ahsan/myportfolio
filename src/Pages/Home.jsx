@@ -6,7 +6,6 @@ import { AboutSection } from '../components/AboutSection';
 import { SkillsSection } from '../components/SkillsSection';
 import { PortfolioSection } from '../components/PortfolioSection';
 import { ContactSection } from '../components/ContactSection';
-import { Footer } from '../components/Footer';
 import { Navvbar } from '../components/Navvbar';
 import Ready from '../components/Ready';
 
@@ -51,7 +50,6 @@ function Home() {
         <ContactSection />
       </main>
 
-      <Footer />
     </div>
   )
 }

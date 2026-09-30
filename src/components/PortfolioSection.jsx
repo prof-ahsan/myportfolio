@@ -1,30 +1,73 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Play } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
 import project1 from '../assets/project1.jpeg';
 import project2 from '../assets/wordpress1.jpeg';
+import project5 from '../assets/realestate.webp';
+import project3 from '../assets/glassware.webp';
+import project4 from '../assets/vosshome.webp';
+import project6 from '../assets/realclientproject.webp';
 
 const categories = ["All Projects",
-   "Web Apps", "Wordpress", 
+   "Frontend", "Wordpress", 
   ];
 
 const projects = [
   {
-    id: 1,
-    title: "E-commerce Platform",
-    category: "Web Apps",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop",
-        skills: ["React",'|', "Tailwindcss", '|', "JavaScript", '|', "Node.js"],
+    id: 10,
+    title: "Rio Rubber Track Client Website",
+    category: "Wordpress",
+    image: project6,
+        skills: ["Wordpress",'|', "Elementor Pro", '|', "HTML", '|', "CSS"],
 
-    desc: "A full-stack e-commerce solution with cart, checkout, and CMS.",
-    liveLink: "https://e-commerceprojectsite.netlify.app/",
-    codeLink: "https://github.com/prof-ahsan/E-Commerce-Web"
+    desc: "Responsive business website developed according to client requirements in collaboration with a developer.",
+    // liveLink: "https://e-commerceprojectsite.netlify.app/",
+    // codeLink: "https://github.com/prof-ahsan/E-Commerce-Web",
+    videoLink: "https://drive.google.com/file/d/1C3nB70BOHmPMG--HZ990ybSe5QlyOcQD/view?usp=drive_link"
+  },
+  {
+    id: 1,
+    title: "Real Estate Property Website",
+    category: "Wordpress",
+    image: project5,
+        skills: ["Wordpress",'|', "Elementor Pro", '|', "ACF", '|', "Custom Post Types", '|', "Loop Grid"],
+
+    desc: "Responsive property website with property listings and detailed property pages.",
+    liveLink: "https://realestatewebsite.freedev.app/",
+    // codeLink: "https://github.com/prof-ahsan/E-Commerce-Web",
+    // videoLink: "https://www.youtube.com/watch?v=lgTHGZF3BQw&list=RDlgTHGZF3BQw&start_radio=1"
   },
   {
     id: 2,
+    title: "E-Commerce Website",
+    category: "Wordpress",
+    image: project3,
+        skills: ["Wordpress",'|', "WooCommerce", '|', "Elementor Pro"],
+
+    desc: "Complete online store with product listings, shopping cart and checkout experience.",
+    liveLink: "mywoostore.great-site.net",
+    // codeLink: "https://github.com/prof-ahsan/E-Commerce-Web"
+    videoLink: "https://drive.google.com/file/d/1VfH1w4-1hunZ0IitmyYhKiA3bJc85bLM/view?usp=drive_link"
+
+  },
+  {
+    id: 3,
+    title: "VOSS Security Solutions",
+    category: "Wordpress",
+    image: project4,
+        skills: ["Wordpress",'|', "Elementor Pro", '|', "Website Redesign", '|', "UI Improvement"],
+
+    desc: "Modern website redesign with improved UX, responsive layout, and professional interface.",
+    liveLink: "https://voss.fast-page.org/",
+    // codeLink: "https://github.com/prof-ahsan/E-Commerce-Web"
+    videoLink: "https://drive.google.com/file/d/1lw84iSJG6gL5J8As4jkFIe2k_a-ZR3B7/view?usp=drive_link"
+
+  },
+  {
+    id: 4,
     title: "Frozen Flakes Website Clone",
-    category: "Web Apps",
+    category: "Frontend",
     image: project1,
     skills: ["HTML",'|', "CSS", '|', "JavaScript", '|', "Bootstrap"],
     desc: "A fully responsive Frozen Flakes website clone showcasing modern UI design and front-end development skills.",
@@ -32,13 +75,14 @@ const projects = [
     codeLink: "https://github.com/prof-ahsan/Frozen-Flake-Clone"
   },
   {
-    id: 3,
-    title: "Personal Portfolio Website (WordPress)",
-    category: "Wordpress",
-    image: project2,
-     skills: ["WordPress",'|', "Elementor",'|', "Hello Theme", '|', "Plugins Integration"],
-    desc: "A responsive portfolio website built with WordPress to showcase my projects, skills, and personal information. Designed with a clean UI and optimized for all devices.",
-    liveLink: "https://exampleportfolio.infinityfreeapp.com/?i=2",
+    id: 5,
+    title: "E-Commerce Platform",
+    category: "Frontend",
+    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop",
+     skills: ["React",'|', "Tailwindcss",'|', "Jawascript", '|', "Node.Js"],
+    desc: "A full-stack e-commerce solution with cart, checkout, and CMS.",
+    liveLink: "https://e-commerceprojectsite.netlify.app/",
+    codeLink: "https://github.com/prof-ahsan/E-Commerce-Web"
   },
   
 ];
@@ -76,7 +120,7 @@ export function PortfolioSection() {
         </div>
 
         {/* Grid */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-5">
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project) => (
               <motion.div
@@ -93,23 +137,23 @@ export function PortfolioSection() {
                   <img 
                     src={project.image} loading='lazy'
                     alt={project.title} 
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
+                    className="w-full h-full object-fill transform group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
                   {/* Overlay Hover Actions */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-brand-bg)] via-[var(--color-brand-bg)]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 flex flex-col justify-end p-8">
                     <div className="translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                      <div className="text-[var(--color-brand-primary)] text-sm font-bold mb-2 uppercase tracking-wider">{project.category}</div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
-                      <p className="text-white/70 mb-6">{project.desc}</p>
+                      <div className="text-[var(--color-brand-primary)] text-xs sm:text-sm font-bold mb-2 uppercase tracking-wider">{project.category}</div>
+                      <h3 className="text-md sm:text-2xl font-bold text-white mb-2">{project.title}</h3>
+                      <p className="text-white/70 mb-1 md:mb-3 xs:text-sm  sm:text-lg">{project.desc}</p>
 
                        <div>
             <strong>Skills:</strong>
             {project.skills.map((skill, index) => (
-              <span key={index}> {skill} </span>
+              <span className='text-sm sm:text-lg' key={index}> {skill} </span>
             ))}
           </div>
                       
-                      <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-3 sm:gap-4">
                         {project.liveLink && (
                         <a href={project.liveLink} target='_blank' className="flex items-center gap-2 text-white hover:text-[var(--color-brand-primary)] transition-colors font-medium">
                           <ExternalLink size={20} /> View Project
@@ -118,6 +162,11 @@ export function PortfolioSection() {
                         {project.codeLink && (
                         <a href={project.codeLink} target='_blank' className="flex items-center gap-2 text-white/50 hover:text-white transition-colors">
                           <Github size={20} /> Code
+                        </a>
+                        )}
+                        {project.videoLink && (
+                        <a href={project.videoLink} target='_blank' className="flex items-center gap-2 text-white/50 hover:text-white transition-colors">
+                          <Play size={20} /> Video
                         </a>
                         )}
                       </div>

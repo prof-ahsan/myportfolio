@@ -6,7 +6,9 @@ import { AboutSection } from './components/AboutSection';
 import { SkillsSection } from './components/SkillsSection';
 import { PortfolioSection } from './components/PortfolioSection';
 import { ContactSection } from './components/ContactSection';
-import Aboutpage from './Pages/Aboutpage';
+import { Footer } from './components/Footer';
+
+
 import Ready from './components/Ready';
 
 const App = () => {
@@ -30,11 +32,12 @@ const App = () => {
 
   <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/about" element={<Aboutpage />} />
+    <Route path="/about" element={<AboutSection />} />
     <Route path="/skills" element={<SkillsSection />} />
     <Route path="/projects" element={<PortfolioSection />} />
     <Route path="/contact" element={<ContactSection />} />
   </Routes>
+  <Footer />
 </BrowserRouter>
     </div>
   )
