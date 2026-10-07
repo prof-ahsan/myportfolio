@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Play } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
 import project1 from '../assets/project1.jpeg';
-import project2 from '../assets/wordpress1.jpeg';
 import project5 from '../assets/realestate.webp';
 import project3 from '../assets/glassware.webp';
 import project4 from '../assets/vosshome.webp';
@@ -22,8 +21,6 @@ const projects = [
         skills: ["Wordpress",'|', "Elementor Pro", '|', "HTML", '|', "CSS"],
 
     desc: "Responsive business website developed according to client requirements in collaboration with a developer.",
-    // liveLink: "https://e-commerceprojectsite.netlify.app/",
-    // codeLink: "https://github.com/prof-ahsan/E-Commerce-Web",
     videoLink: "https://drive.google.com/file/d/1C3nB70BOHmPMG--HZ990ybSe5QlyOcQD/view?usp=drive_link"
   },
   {
@@ -35,8 +32,6 @@ const projects = [
 
     desc: "Responsive property website with property listings and detailed property pages.",
     liveLink: "https://realestatewebsite.freedev.app/",
-    // codeLink: "https://github.com/prof-ahsan/E-Commerce-Web",
-    // videoLink: "https://www.youtube.com/watch?v=lgTHGZF3BQw&list=RDlgTHGZF3BQw&start_radio=1"
   },
   {
     id: 2,
@@ -47,7 +42,6 @@ const projects = [
 
     desc: "Complete online store with product listings, shopping cart and checkout experience.",
     liveLink: "mywoostore.great-site.net",
-    // codeLink: "https://github.com/prof-ahsan/E-Commerce-Web"
     videoLink: "https://drive.google.com/file/d/1VfH1w4-1hunZ0IitmyYhKiA3bJc85bLM/view?usp=drive_link"
 
   },
@@ -60,7 +54,6 @@ const projects = [
 
     desc: "Modern website redesign with improved UX, responsive layout, and professional interface.",
     liveLink: "https://voss.fast-page.org/",
-    // codeLink: "https://github.com/prof-ahsan/E-Commerce-Web"
     videoLink: "https://drive.google.com/file/d/1lw84iSJG6gL5J8As4jkFIe2k_a-ZR3B7/view?usp=drive_link"
 
   },
