@@ -29,7 +29,7 @@ export function AboutSection() {
             transition={{ duration: 0.7 }}
             className="flex-1"
           >
-            <img src={about} loading='lazy' alt="About Me" className=" lg:w-full lg:h-screen rounded-2xl shadow-lg" />
+            <img src={about} loading='lazy' alt="coding pIcture" className=" lg:w-full lg:h-screen rounded-2xl shadow-lg" />
           
           </motion.div>
           

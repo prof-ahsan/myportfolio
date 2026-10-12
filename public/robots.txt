@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ahsanishtiaq.netlify.app/sitemap.xml

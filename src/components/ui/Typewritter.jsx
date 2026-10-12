@@ -33,11 +33,11 @@ export function TypewriterEffect({ words, speed = 150 }) {
   }, [charIndex, isDeleting, wordIndex, words, speed]);
 
   return (
-    <h1 className="text-lg sm:text-2xl font-semibold mt-1 ml-1 text-[var(--color-brand-primary)] animate-pulse">
+    <h3 className="text-lg sm:text-2xl font-semibold mt-1 ml-1 text-[var(--color-brand-primary)] animate-pulse">
       {displayedText}
-      <span className=" dark:text-[var(--color-brand-primary)] inline-block w-[3px] h-4 sm:h-5 bg-[var(--color-brand-primary)] ml-1 animate-pulse">
+      <p className=" dark:text-[var(--color-brand-primary)] inline-block w-[3px] h-4 sm:h-5 bg-[var(--color-brand-primary)] ml-1 animate-pulse">
         {/* | */}
-        </span>
-    </h1>
+        </p>
+    </h3>
   );
 }

@@ -139,7 +139,7 @@ export function HeroSection() {
           >
             {/* Typewriter line: min-height fix hai taake text wrap hone par layout jump na kare */}
             <div className="flex flex-col items-center gap-x-2 min-h-[4.5rem] sm:min-h-[3rem] sm:flex-row sm:flex-wrap sm:items-baseline sm:justify-center lg:justify-start text-lg sm:text-2xl font-semibold text-white mb-3">
-              <span>I Build Modern</span>
+              <p>I Build Modern</p>
               <TypewriterEffect words={words} />
             </div>
 
